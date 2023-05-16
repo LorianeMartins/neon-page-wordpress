@@ -25,7 +25,6 @@
 
         ul {
             margin-top: 6.4rem;
-            display: flex;
             @include flex(row, center, space-between);
             width: 100%;
             max-width: 62.1rem;
@@ -35,7 +34,6 @@
                 align-items: center;
 
                 .icon {
-                    display: flex;
                     @include flex(row, center, center);
                     width: 4.8rem;
                     height: 4.8rem;
@@ -101,7 +99,6 @@
     padding-top: 12.9rem;
 
     .container {
-        display: flex;
         @include flex(row, flex-start, space-between);
     }
 
@@ -125,7 +122,6 @@
         }
 
         .text {
-            display: flex;
             @include flex(column, center, center);
 
             .icon {
@@ -144,7 +140,6 @@
             }
 
             .info-text {
-                display: flex;
                 @include flex(column, center, center);
 
                 h3 {
@@ -247,7 +242,6 @@
             width: 100%;
             height: 41rem;
             background: url('../assets/img/bg-box-card-neon.svg') no-repeat center center;
-            display: flex;
             @include flex(row, center, space-between);
             padding-left: 5.9rem;
 
@@ -270,7 +264,9 @@
                     margin-bottom: 3.3rem;
                 }
 
-                h2, h3, p {
+                h2,
+                h3,
+                p {
                     color: #FFFFFF;
                 }
 
@@ -290,5 +286,44 @@
                 margin-right: -3.1rem;
             }
         }
+    }
+}
+
+.s-card-evidences {
+    padding-top: 13.4rem;
+
+    .top {
+        @include flex(row, flex-end, space-between);
+        margin-bottom: 4rem;
+
+        h2 {
+            span {
+                display: block;
+                color: $gray-200;
+                margin-bottom: 1.4rem;
+            }
+        }
+
+        .swiper-pagination {
+            position: relative;
+            max-width: 30%;
+            @include flex(row, flex-end, flex-end);
+
+            .swiper-pagination-bullet {
+                background: #FFC800;
+                opacity: 0.3;
+                border-radius: 12px;
+                transition: all .3s;
+
+                &-active {
+                    opacity: 1;
+                    width: 1.73rem;
+                }
+            }
+        }
+    }
+
+    .slide-evidences {
+        overflow: hidden;
     }
 }
