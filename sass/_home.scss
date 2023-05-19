@@ -214,7 +214,7 @@
         }
     }
 
-    @include responsive(480px) {
+    @include responsive(510px) {
         padding-top: 12.4rem;
         height: 73.9rem;
 
@@ -435,6 +435,7 @@
             background: url('../assets/img/bg-box-card-neon.svg') no-repeat center center;
             @include flex(row, center, space-between);
             padding-left: 5.9rem;
+            border-radius: 1.032rem;
 
             .text {
                 width: 100%;
@@ -478,6 +479,245 @@
             }
         }
     }
+
+    @include responsive(1280px) {
+        .left-area {
+            .ilustra-mockup {
+                .circle {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @include responsive(1150px) {
+        .right-area {
+            max-width: 73rem;
+
+            .main-text {
+                ul {
+                    li {
+                        .info {
+                            .text {
+                                margin-left: 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .box-card {
+                padding-left: 3.5rem;
+
+                .image {
+                    margin-right: -1rem;
+                }
+            }
+        }
+    }
+
+    @include responsive(991px) {
+        .container {
+            flex-direction: column-reverse;
+
+            .right-area {
+                max-width: 100%;
+                margin-top: 6.8rem;
+                margin-bottom: 9.8rem;
+
+                .main-text {
+                    margin-bottom: 5.7rem;
+
+                    h2 {
+                        text-align: center;
+                        margin: 0 auto;
+                        font-size: 3.6rem;
+                        margin-bottom: 5.3rem;
+                    }
+
+                    .btn {
+                        display: block;
+                        text-align: center;
+
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+
+                .box-card {
+                    max-width: 94.7%;
+
+                    .image {
+                        margin-right: -4rem;
+                    }
+
+                    .text {
+                        margin-left: 3rem;
+                    }
+                }
+            }
+
+            .left-area {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                max-width: 61rem;
+                margin: 0 auto;
+
+                .ilustra-mockup {
+                    margin-bottom: 0;
+                    max-width: 25.5rem;
+                }
+
+                .text {
+                    max-width: 27rem;
+                }
+            }
+        }
+    }
+
+    @include responsive(685px) {
+        .container {
+            .right-area {
+                .box-card {
+                    max-width: 100%;
+                    height: 47rem;
+                    background-size: cover;
+                    flex-direction: column;
+                    padding-top: 4.3rem;
+                    padding-left: 0;
+                    margin-bottom: 4rem;
+
+                    .image {
+                        margin-right: 0;
+                    }
+
+                    .text {
+                        max-width: 90%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin-bottom: 3rem;
+                        margin-left: 0;
+
+                        h3 {
+                            text-align: center;
+                        }
+
+                        p {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    @include responsive(500px) {
+        padding-top: .6rem;
+        position: relative;
+
+        &:after {
+            content: "";
+            width: 100%;
+            height: 21.4rem;
+            background: linear-gradient(180deg, #F7F7FA 0%, rgba(247, 247, 250, 0) 100%);
+            transform: matrix(1, 0, 0, -1, 0, 0);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .container {
+            .left-area {
+                flex-direction: column-reverse;
+
+                .text {
+                    margin-bottom: 4rem;
+
+                    .icon {
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+
+                .ilustra-mockup {
+                    height: 39.7rem;
+                    overflow: hidden;
+                }
+            }
+
+            .right-area {
+                margin-bottom: 6.7rem;
+
+                .main-text {
+                    h2 {
+                        font-size: 2.8rem;
+                        margin-bottom: 3.7rem;
+                    }
+
+                    ul {
+                        li {
+                            padding: 2.8rem 0;
+
+                            .info {
+                                align-items: flex-start;
+
+                                .text {
+                                    max-width: 72%;
+
+                                    h3 {
+                                        font-size: 2rem;
+                                    }
+
+                                    p {
+                                        font-size: 1.4rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .box-card {
+
+                    .text {
+                        margin-left: 0rem;
+
+                        h2 {
+                            font-size: 2.8rem;
+                            font-weight: 600;
+                        }
+
+                        h3 {
+                            font-size: 2rem;
+                        }
+
+                        p {
+                            max-width: 25.3rem;
+                            margin-bottom: 3.4rem;
+                        }
+
+                        .btns {
+                            .btn-primary {
+                                padding: 0 3rem;
+                            }
+                        }
+                    }
+
+                    .image {
+                        max-width: 27.7rem;
+                    }
+                }
+            }
+        }
+    }
+
+
 }
 
 .s-card-evidences {
