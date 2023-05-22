@@ -35,45 +35,58 @@
           <nav>
             <div class="item">
               <strong>Produtos Neon</strong>
-              <ul>
-                <li><a href="">Cartão de crédito</a></li>
-                <li><a href="">Cartão pré-pago</a></li>
-                <li><a href="">Neon Mais</a></li>
-                <li><a href="">Investimentos</a></li>
-                <li><a href="">Empréstimo</a></li>
-              </ul>
+              <?php
+                $args = array(
+                  'menu' => 'Menu Produtos Footer',
+                  'theme_location' => 'products-menu-footer',
+                  'container' => false
+                );
+                wp_nav_menu( $args );
+              ?>
             </div>
             <div class="item">
               <strong>Conta digital PJ</strong>
-              <ul>
-                <li><a href="">Sou MEI</a></li>
-                <li><a href="">Sou ME</a></li>
-              </ul>
+              <?php
+                $args = array(
+                  'menu' => 'Menu Conta Digital Footer',
+                  'theme_location' => 'account-menu-footer',
+                  'container' => false
+                );
+                wp_nav_menu( $args );
+              ?>
             </div>
             <div class="item">
               <strong>Blog</strong>
-              <ul>
-                <li><a href="">#focanodinheiro</a></li>
-                <li><a href="">O poder da comunidade</a></li>
-                <li><a href="">Desafio das 52 semanas</a></li>
-                <li><a href="">Planilha de gastos</a></li>
-              </ul>
+              <?php
+                $args = array(
+                  'menu' => 'Menu Blog Footer',
+                  'theme_location' => 'blog-menu-footer',
+                  'container' => false
+                );
+                wp_nav_menu( $args );
+              ?>
             </div>
             <div class="item">
               <strong>Institucional</strong>
-              <ul>
-                <li><a href="">Conheça a Neon</a></li>
-                <li><a href="">Trabalhe conosco</a></li>
-                <li><a href="">Termos de uso</a></li>
-                <li><a href="">Políticas de privacidade</a></li>
-              </ul>
+              <?php
+                $args = array(
+                  'menu' => 'Menu Institucional Footer',
+                  'theme_location' => 'institucional-menu-footer',
+                  'container' => false
+                );
+                wp_nav_menu( $args );
+              ?>
             </div>
             <div class="item">
               <strong>Ajuda</strong>
-              <ul>
-                <li><a href="">Ouvidoria</a></li>
-                <li><a href="">Fale conosco</a></li>
-              </ul>
+              <?php
+                $args = array(
+                  'menu' => 'Menu Ajuda Footer',
+                  'theme_location' => 'help-menu-footer',
+                  'container' => false
+                );
+                wp_nav_menu( $args );
+              ?>
             </div>
           </nav>
           <div class="btns">

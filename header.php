@@ -50,13 +50,14 @@
           <img src="<?php echo get_template_directory_uri()?>/assets/img/logo.svg" alt="Logo Neon" />
         </a>
         <nav>
-          <ul>
-            <li><a href="<?php echo get_permalink(get_page_by_path('Home')) ?>">Produtos</a></li>
-            <li><a href="<?php echo get_permalink(get_page_by_path('Home')) ?>">Conta digital PJ</a></li>
-            <li><a href="<?php echo get_permalink(get_page_by_path('Home')) ?>">Quem somos</a></li>
-            <li><a href="<?php echo get_permalink(get_page_by_path('Home')) ?>">Blog</a></li>
-            <li><a href="<?php echo get_permalink(get_page_by_path('Home')) ?>">Ajuda</a></li>
-          </ul>
+          <?php
+            $args = array(
+              'menu' => 'Header Principal',
+              'theme_location' => 'header-principal',
+              'container' => false
+            );
+            wp_nav_menu( $args );
+          ?>
           <button class="btn-secundary white">Abra sua conta digital</button>
           <button class="btn-mobile">
             <img src="<?php echo get_template_directory_uri()?>/assets/img/btn-mobile.svg" alt="" />
