@@ -143,7 +143,7 @@
     <div class="container">
       <div class="top" data-aos="fade-right">
         <h2>
-          <span>Prático, fácil, moderno</span> Você resolve tudo sem estresse
+          <span><?php the_field('title_primary')?></span><?php the_field('title_secondary')?>
           😊
         </h2>
         <div class="swiper-pagination"></div>
@@ -151,96 +151,22 @@
 
       <div class="swiper slide-evidences" data-aos="fade-up">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="card-brief">
-              <div class="user">
-                <strong>@marciogurka</strong>
-                <img
-                  src="<?php echo get_template_directory_uri()?>/assets/img/icon-twiiter.svg"
-                  alt="Ícone twiiter"
-                />
+          <?php if( have_rows('evidences') ): while ( have_rows('evidences') ) : the_row(); ?>
+            <div class="swiper-slide">
+              <div class="card-brief">
+                <div class="user">
+                  <strong><?php the_sub_field('user_evidence') ?></strong>
+                  <img
+                    src="<?php echo get_template_directory_uri()?>/assets/img/icon-twiiter.svg"
+                    alt="Ícone twiiter"
+                  />
+                </div>
+                <p>
+                  <?php the_sub_field('text_evidence') ?>
+                </p>
               </div>
-              <p>
-                Valeu @banconenon! Linda embalagem e o cartão tbm é lindo!
-                Muito amor por esse banco #bancoNeon
-              </p>
             </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card-brief">
-              <div class="user">
-                <strong>@marciogurka</strong>
-                <img
-                  src="<?php echo get_template_directory_uri()?>/assets/img/icon-twiiter.svg"
-                  alt="Ícone twiiter"
-                />
-              </div>
-              <p>
-                Valeu @banconenon! Linda embalagem e o cartão tbm é lindo!
-                Muito amor por esse banco #bancoNeon
-              </p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card-brief">
-              <div class="user">
-                <strong>@marciogurka</strong>
-                <img
-                  src="<?php echo get_template_directory_uri()?>/assets/img/icon-twiiter.svg"
-                  alt="Ícone twiiter"
-                />
-              </div>
-              <p>
-                Valeu @banconenon! Linda embalagem e o cartão tbm é lindo!
-                Muito amor por esse banco #bancoNeon
-              </p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card-brief">
-              <div class="user">
-                <strong>@marciogurka</strong>
-                <img
-                  src="<?php echo get_template_directory_uri()?>/assets/img/icon-twiiter.svg"
-                  alt="Ícone twiiter"
-                />
-              </div>
-              <p>
-                Valeu @banconenon! Linda embalagem e o cartão tbm é lindo!
-                Muito amor por esse banco #bancoNeon
-              </p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card-brief">
-              <div class="user">
-                <strong>@marciogurka</strong>
-                <img
-                  src="<?php echo get_template_directory_uri()?>/assets/img/icon-twiiter.svg"
-                  alt="Ícone twiiter"
-                />
-              </div>
-              <p>
-                Valeu @banconenon! Linda embalagem e o cartão tbm é lindo!
-                Muito amor por esse banco #bancoNeon
-              </p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="card-brief">
-              <div class="user">
-                <strong>@marciogurka</strong>
-                <img
-                  src="<?php echo get_template_directory_uri()?>/assets/img/icon-twiiter.svg"
-                  alt="Ícone twiiter"
-                />
-              </div>
-              <p>
-                Valeu @banconenon! Linda embalagem e o cartão tbm é lindo!
-                Muito amor por esse banco #bancoNeon
-              </p>
-            </div>
-          </div>
+          <?php endwhile; else : endif;?>
         </div>
       </div>
     </div>
