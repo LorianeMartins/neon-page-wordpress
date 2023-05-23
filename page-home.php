@@ -176,48 +176,25 @@
     <div class="container">
       <div class="text" data-aos="fade-right">
         <h2>
-          <span>Aproveite</span>Domine o seu dinheiro com uma conta 100%
-          digital
+          <span><?php the_field('title_primary_account')?></span><?php the_field('title_secondary_account')?>
         </h2>
         <ul>
-          <li>
-            <div class="icon">
-              <img
-                src="<?php echo get_template_directory_uri()?>/assets/img/icon-cartao-internacional.svg"
-                alt="Ícone cartão internacional"
-              />
-            </div>
-            <div class="info">
-              <h4>Cartão visa internacional</h4>
-              <p>Tenha facilidades e benefícios para o seu dia a dia.</p>
-            </div>
-          </li>
-          <li>
-            <div class="icon">
-              <img
-                src="<?php echo get_template_directory_uri()?>/assets/img/icon-taxa-zero.svg"
-                alt="Ícone taxa zero"
-              />
-            </div>
-            <div class="info">
-              <h4>Zero mensalidade e anuidade</h4>
-              <p>Não gaste grana pagando taxas desnecessárias.</p>
-            </div>
-          </li>
-          <li>
-            <div class="icon">
-              <img
-                src="<?php echo get_template_directory_uri()?>/assets/img/icon-poupanca.svg"
-                alt="Ícone de poupança"
-              />
-            </div>
-            <div class="info">
-              <h4>Investimento que rende mais que a poupança</h4>
-              <p>Invista o seu dinheiro de maneira mais rentável.</p>
-            </div>
-          </li>
+          <?php if( have_rows('items_account') ): while ( have_rows('items_account') ) : the_row(); ?>
+            <li>
+              <div class="icon">
+                <img
+                  src="<?php the_sub_field('icon_item') ?>"
+                  alt="Ícone cartão internacional"
+                />
+              </div>
+              <div class="info">
+                <h4><?php the_sub_field('title_item') ?></h4>
+                <p><?php the_sub_field('description_item') ?></p>
+              </div>
+            </li>
+          <?php endwhile; else : endif;?>
         </ul>
-        <button class="btn-primary">Ative sua conta digital</button>
+        <button class="btn-primary"><?php the_field('button_account')?></button>
       </div>
       <div class="images">
         <img src="<?php echo get_template_directory_uri()?>/assets/img/mockup-01.svg" class="mockup-01" alt=""
