@@ -9,41 +9,25 @@
   <section class="s-hero">
     <div class="container">
       <div class="text" data-aos="fade-right">
-        <h3>Abra sua conta, é só baixar o app!</h3>
-        <h1>A conta digital certa pra cuidar bem do seu dinheiro</h1>
-        <button class="btn-primary">Abra sua conta digital</button>
+        <h3><?php the_field('subtitle_section_hero')?></h3>
+        <h1><?php the_field('title_section_hero')?></h1>
+        <button class="btn-primary"><?php the_field('button_text')?></button>
         <ul>
-          <li>
-            <div class="icon">
-              <img
-                src="<?php echo get_template_directory_uri()?>/assets/img/icon-anuidade.svg"
-                alt="Ícone de cartão sem anuidade"
-              />
-            </div>
-            <span>Cartão sem <br />anuidade</span>
-          </li>
-          <li>
-            <div class="icon">
-              <img
-                src="<?php echo get_template_directory_uri()?>/assets/img/icon-conta-digital.svg"
-                alt="Ícone de conta digital"
-              />
-            </div>
-            <span>Conta digital <br />100% grátis</span>
-          </li>
-          <li>
-            <div class="icon">
-              <img
-                src="<?php echo get_template_directory_uri()?>/assets/img/icon-dinheiro.svg"
-                alt="Ícone de dinheiro"
-              />
-            </div>
-            <span>Seu dinheiro <br />rendendo mais</span>
-          </li>
+          <?php if( have_rows('items_section_hero') ): while ( have_rows('items_section_hero') ) : the_row(); ?>
+            <li>
+              <div class="icon">
+                <img
+                  src="<?php the_sub_field('icon_item') ?>"
+                  alt="Ícone de cartão sem anuidade"
+                />
+              </div>
+              <span><?php the_sub_field('text_item') ?></span>
+            </li>
+          <?php endwhile; else : endif;?>
         </ul>
       </div>
       <div class="area-image">
-        <h2 data-aos="fade-left">Banco 100% digital</h2>
+        <h2 data-aos="fade-left"><?php the_field('title_section_hero_digital')?></h2>
         <div class="image" data-aos="zoom-in">
           <img
             class="card-front"
@@ -87,19 +71,18 @@
             <img src="<?php echo get_template_directory_uri()?>/assets/img/icon-neon.svg" alt="Ícone neon" />
           </div>
           <div class="info-text">
-            <h3>Baixe nosso app</h3>
+            <h3><?php the_field('title_download_app')?></h3>
             <p>
-              Que tal abrir uma conta digital para ver como a gente faz a sua
-              vida muito mais simples?
+              <?php the_field('description_download_app')?>
             </p>
             <ul>
               <li>
-                <a href="" target="_blank">
+                <a href="<?php the_field('description_apple_store')?>" target="_blank">
                   <img src="<?php echo get_template_directory_uri()?>/assets/img/apple-store.svg" alt="Apple store" />
                 </a>
               </li>
               <li>
-                <a href="" target="_blank">
+                <a href="<?php the_field('description_google_play')?>" target="_blank">
                   <img src="<?php echo get_template_directory_uri()?>/assets/img/google-play.svg" alt="Google play" />
                 </a>
               </li>
@@ -109,78 +92,41 @@
       </div>
       <div class="right-area">
         <div class="main-text" data-aos="fade-left">
-          <h2>Resolva sua vida direto pelo app Neon!</h2>
+          <h2><?php the_field('text_app_neon')?></h2>
           <ul>
-            <li>
-              <div class="info">
-                <img
-                  src="<?php echo get_template_directory_uri()?>/assets/img/icon-cartao-credito.svg"
-                  class="icon"
-                  alt=""
-                />
-                <div class="text">
-                  <h3>Cartão de crédito sem anuidade</h3>
-                  <p>
-                    Conta digital com cartão de crédito sem anuidade e sem
-                    complicação
-                  </p>
+            <?php if( have_rows('items_app_neon') ): while ( have_rows('items_app_neon') ) : the_row(); ?>
+              <li>
+                <div class="info">
+                  <img
+                    src="<?php the_sub_field('icon_item') ?>"
+                    class="icon"
+                    alt=""
+                  />
+                  <div class="text">
+                    <h3><?php the_sub_field('text_item') ?></h3>
+                    <p>
+                      <?php the_sub_field('description_item') ?>
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div class="arrow-wight">
-                <img src="<?php echo get_template_directory_uri()?>/assets/img/arrow-right.svg" alt="Arrow right" />
-              </div>
-            </li>
-            <li>
-              <div class="info">
-                <img
-                  src="<?php echo get_template_directory_uri()?>/assets/img/icon-taxas.svg"
-                  class="icon"
-                  alt="Ícone taxas"
-                />
-                <div class="text">
-                  <h3>Sem taxas</h3>
-                  <p>
-                    Transferências, boletos de depósito e outros serviços
-                    gratuitos
-                  </p>
+                <div class="arrow-wight">
+                  <img src="<?php echo get_template_directory_uri()?>/assets/img/arrow-right.svg" alt="Arrow right" />
                 </div>
-              </div>
-              <div class="arrow-wight">
-                <img src="<?php echo get_template_directory_uri()?>/assets/img/arrow-right.svg" alt="Arrow right" />
-              </div>
-            </li>
-            <li>
-              <div class="info">
-                <img
-                  src="<?php echo get_template_directory_uri()?>/assets/img/icon-investimentos.svg"
-                  class="icon"
-                  alt="Ícone investimentos"
-                />
-                <div class="text">
-                  <h3>Mais investimentos</h3>
-                  <p>
-                    Rendem mais que a poupança e você resgata quando quiser
-                  </p>
-                </div>
-              </div>
-              <div class="arrow-wight">
-                <img src="<?php echo get_template_directory_uri()?>/assets/img/arrow-right.svg" alt="Arrow right" />
-              </div>
-            </li>
+              </li>
+            <?php endwhile; else : endif;?>
           </ul>
-          <a class="btn" href="">Conheça outros produtos</a>
+          <a class="btn" href=""><?php the_field('button_app_neon')?></a>
         </div>
         <div class="box-card" data-aos="fade-left">
           <div class="text">
-            <h2>Neon Pejota</h2>
-            <h3>Contas digitais PJ gratuitas para decolar seu negócio!</h3>
+            <h2><?php the_field('title_pj')?></h2>
+            <h3><?php the_field('subtitle_pj')?></h3>
             <p>
-              As melhores contas para fazer pagamentos, compras e receber dos
-              seus clientes.
+              <?php the_field('description_pj')?>
             </p>
             <div class="btns">
-              <button class="btn-primary">Sou MEI</button>
-              <button class="btn-primary">Sou ME</button>
+              <button class="btn-primary"><?php the_field('title_button_mei')?></button>
+              <button class="btn-primary"><?php the_field('title_button_me')?></button>
             </div>
           </div>
           <img
