@@ -45,4 +45,13 @@ add_action( 'init', 'register_blog_menu_footer' );
 add_action( 'init', 'register_institucional_menu_footer' );
 add_action( 'init', 'register_help_menu_footer' );
 
+acf_add_options_page(array(
+	'page_title' 	=> 'Editar Rodapé',
+	'menu_title'	=> 'Editar Rodapé',
+	'menu_slug' 	=> 'editar-rodape',
+	'capability'	=> 'edit_posts',
+	'icon_url' => 'dashicons-align-center',
+	'redirect'		=> false
+));
+
 ?>
