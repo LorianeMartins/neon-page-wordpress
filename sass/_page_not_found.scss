@@ -1,0 +1,22 @@
+.s-page-not-found {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        img {
+            display: flex;
+            margin: 0 auto;
+            width: 40%;
+        }
+
+        h2 {
+            margin-bottom: 4rem;
+        }
+
+        h3 {
+            margin-bottom: 4rem;
+        }
+    }
+}
