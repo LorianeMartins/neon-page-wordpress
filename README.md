@@ -11,6 +11,9 @@ O repositório com o projeto estruturado em HTML/CSS/SASS e JS pode ser acessado
 - Funções do WordPress: Explorei as funcionalidades nativas do WordPress, como customização de temas, criação de páginas personalizadas, criação de menus e gerenciamento de conteúdo.
 - Plugins do WordPress: Utilizei diversos plugins populares, como Advanced Custom Fields PRO, All-in-One WP Migration, Contact Form 7, Disable REST API, Duplicator, Fullestop Lock Down Admin, SVG Support e W3 Total Cache, para adicionar recursos extras e aprimorar a funcionalidade e desempenho do site.
 
+## 🌐 Veja o Projeto ao Vivo!
+Confira o projeto de redesign da página do Banco Neon através deste [link](https://loriprojects-neon.netlify.app/).
+
 ## 🎉 Contribuições
 Contribuições, sugestões e melhorias são sempre bem-vindas!
 
